@@ -1,0 +1,27 @@
+openapi: 3.0.0
+info:
+  title: simple-api
+  version: 1.0.0
+x-kusk:
+  mocking:
+    enabled: true
+paths:
+  /hello:
+    get:
+      summary: Responds by greeting hello world
+      responses:
+        '201':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+              example:
+                message: “Hello world”
+servers:
+  # Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/GEORGWILBROND/openapitest/1.0.0
